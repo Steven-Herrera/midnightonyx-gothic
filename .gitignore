@@ -1,0 +1,19 @@
+# Build output
+build/
+_build/
+*.pkg.tar.zst
+*.tar.zst
+
+# Arch packaging output
+pkg/
+src/
+
+# Temporary/editor files
+*~
+*.swp
+*.tmp
+.DS_Store
+
+# Local development state
+.cache/
+.local/
