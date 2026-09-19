@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "Plasma/Wallpaper",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "midnightonyx"
+            }
+        ],
+        "Description": "Atmospheric Victorian Gothic manor wallpaper for MidnightOnyx Gothic",
+        "EnabledByDefault": true,
+        "Icon": "preferences-desktop-wallpaper",
+        "Id": "org.midnightonyx.manor",
+        "License": "GPL-3.0-or-later",
+        "Name": "MidnightOnyx Manor"
+    },
+    "Keywords": "",
+    "X-KDE-ParentApp": "org.kde.plasmashell"
+}

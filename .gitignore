@@ -17,3 +17,6 @@ src/
 # Local development state
 .cache/
 .local/
+
+# Local prototype artwork
+components/wallpaper/manor/contents/images/*-prototype.*
