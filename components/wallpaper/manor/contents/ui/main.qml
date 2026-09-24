@@ -16,7 +16,7 @@ WallpaperItem {
 
         Image {
             anchors.fill: parent
-            source: Qt.resolvedUrl("../images/manor-prototype.png")
+            source: Qt.resolvedUrl("../images/midnight-manor.png")
             fillMode: Image.PreserveAspectCrop
             horizontalAlignment: Image.AlignHCenter
             verticalAlignment: Image.AlignVCenter
@@ -24,5 +24,17 @@ WallpaperItem {
             asynchronous: true
             cache: true
         }
+
+        FogLayer {
+            anchors.fill: parent
+
+            source: Qt.resolvedUrl("../images/midnight-fog.png")
+
+            fogOpacity: 0.30
+            fogScale: 0.40
+            verticalPosition: 0.67
+            driftDuration: 89000
+        }
+
     }
 }

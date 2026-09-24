@@ -19,4 +19,5 @@ src/
 .local/
 
 # Local prototype artwork
-components/wallpaper/manor/contents/images/*-prototype.*
+components/wallpaper/manor/contents/images/*-prototype*
+
