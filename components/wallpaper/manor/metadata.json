@@ -13,8 +13,8 @@
         "License": "GPL-3.0-or-later",
         "Name": "MidnightOnyx Manor",
         "Version": "0.1.0",
-        "Website": "<project URL>",
-        "BugReportUrl": "<project issue tracker URL>"
+        "Website": "https://github.com/Steven-Herrera/midnightonyx-gothic",
+        "BugReportUrl": "https://github.com/Steven-Herrera/midnightonyx-gothic/issues"
     },
     "Keywords": [
         "gothic",
