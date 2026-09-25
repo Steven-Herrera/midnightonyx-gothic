@@ -6,13 +6,23 @@
                 "Name": "midnightonyx"
             }
         ],
-        "Description": "Atmospheric Victorian Gothic manor wallpaper for MidnightOnyx Gothic",
+        "Description": "Animated Victorian Gothic manor wallpaper for KDE Plasma",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-wallpaper",
         "Id": "org.midnightonyx.manor",
         "License": "GPL-3.0-or-later",
-        "Name": "MidnightOnyx Manor"
+        "Name": "MidnightOnyx Manor",
+        "Version": "0.1.0",
+        "Website": "<project URL>",
+        "BugReportUrl": "<project issue tracker URL>"
     },
-    "Keywords": "",
-    "X-KDE-ParentApp": "org.kde.plasmashell"
+    "Keywords": [
+        "gothic",
+        "animated",
+        "wallpaper",
+        "fog",
+        "victorian"
+    ],
+    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "X-Plasma-API-Minimum-Version": "6.0"
 }
