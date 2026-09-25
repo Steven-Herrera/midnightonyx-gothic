@@ -30,6 +30,6 @@ jobs:
           fish --no-execute tests/validate-wallpaper.fish
 
       - name: Validate wallpaper
-        shell: fish
+        shell: fish {0}
         run: |
           tests/validate-wallpaper.fish
