@@ -297,20 +297,32 @@ echo
 echo '=== Git hygiene ==='
 
 if command -q git
-    set tracked_prototypes (
+    set tracked_files (
         git \
             -C "$repo_root" \
             ls-files \
-            | grep -E '(^|/).*prototype.*$'
+            2>/dev/null
     )
+    set git_status $status
 
-    if test -z "$tracked_prototypes"
-        pass 'No prototype artwork is tracked by Git'
+    if test $git_status -ne 0
+        fail 'Git can inspect tracked repository files'
     else
-        fail 'No prototype artwork is tracked by Git'
+        pass 'Git can inspect tracked repository files'
 
-        for file in $tracked_prototypes
-            printf '      tracked: %s\n' "$file" >&2
+        set tracked_prototypes (
+            printf '%s\n' $tracked_files \
+                | grep -E '(^|/).*prototype.*$'
+        )
+
+        if test -z "$tracked_prototypes"
+            pass 'No prototype artwork is tracked by Git'
+        else
+            fail 'No prototype artwork is tracked by Git'
+
+            for file in $tracked_prototypes
+                printf '      tracked: %s\n' "$file" >&2
+            end
         end
     end
 
