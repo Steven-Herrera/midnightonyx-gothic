@@ -33,3 +33,44 @@ jobs:
         shell: fish {0}
         run: |
           tests/validate-wallpaper.fish
+
+  wallpaper-kde:
+    name: Wallpaper / Arch KDE
+    runs-on: ubuntu-latest
+
+    container:
+      image: archlinux:latest
+
+    steps:
+      - name: Update Arch and install validation dependencies
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --needed --noconfirm \
+            fish \
+            python \
+            git \
+            imagemagick \
+            kpackage
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show validation environment
+        run: |
+          cat /etc/os-release
+          echo
+          fish --version
+          python --version
+          git --version
+          identify --version | head -n 1
+          kpackagetool6 --version
+
+      - name: Check Fish syntax
+        shell: fish {0}
+        run: |
+          fish --no-execute tests/validate-wallpaper.fish
+
+      - name: Validate wallpaper with KDE tooling
+        shell: fish {0}
+        run: |
+          tests/validate-wallpaper.fish --require-kde
