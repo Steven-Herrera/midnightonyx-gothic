@@ -70,16 +70,18 @@ set working_tree_changes (
         -C "$repo_root" \
         status \
         --porcelain \
-        --untracked-files=normal
+        --untracked-files=normal \
+        | string collect
 )
-set git_status $status
+
+set git_status $pipestatus[1]
 
 if test $git_status -ne 0
     fail 'Unable to inspect Git working tree'
 end
 
 if test -n "$working_tree_changes"
-    printf '%s\n' $working_tree_changes >&2
+    printf '%s\n' "$working_tree_changes" >&2
     fail 'Working tree is not clean; commit or stash changes before building a release'
 end
 
